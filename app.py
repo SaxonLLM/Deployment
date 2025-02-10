@@ -145,7 +145,7 @@ def index():
                 <select name="model" id="model">
                     <option value="SI">SI</option>
                     <option value="SR">SR</option>
-                    <option value="SSR">SSR</option>
+                    <option value="SSI">SSI</option>
                 </select>
 
                 <label for="prompt_number">Choose a prompt:</label>
@@ -230,7 +230,7 @@ def index():
 
 @app.route('/get_response', methods=['POST'])
 def get_response():
-    model = request.form.get('model')  # Get selected model (SI, SR, SSR)
+    model = request.form.get('model')  # Get selected model (SI, SR, SSI)
     prompt_number = int(request.form.get('prompt_number'))
     iteration = int(request.form.get('iteration'))
     
